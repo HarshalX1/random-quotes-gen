@@ -31,26 +31,42 @@ class App extends React.Component {
     const num = this.state.num;
     const quoteObj = quotes[num];
     const color = Colors[num];
+    const quote = quoteObj.quote;
+    const author = quoteObj.author;
 
     return (
       <section style={{ backgroundColor: color }}>
         <div id="quote-box">
-          <p id="text" style={{ color: color }}>
-            "{quoteObj.quote}"
+          <p
+            id="text"
+            style={{ color: color, transition: "all 1s ease-in-out" }}
+          >
+            "{quote}"
           </p>
-          <cite id="author" style={{ color: color }}>
-            -{quoteObj.author}
+          <cite
+            id="author"
+            style={{ color: color, transition: "all 1s ease-in-out" }}
+          >
+            -{author}
           </cite>
           <br />
           <div id="btns-div">
-            <a id="tweet-quote" href="twitter.com/intent/tweet">
+            <a
+              id="tweet-quote"
+              href={encodeURI(
+                `https://www.twitter.com/intent/tweet?text=${quote} -${author}`
+              )}
+            >
               <FontAwesomeIcon
-                style={{ color: color }}
+                style={{ color: color, transition: "all 1s ease-in-out" }}
                 icon={faTwitterSquare}
               />
             </a>
             <button
-              style={{ backgroundColor: color }}
+              style={{
+                backgroundColor: color,
+                transition: "all 1s ease-in-out",
+              }}
               onClick={this.getNewQuote}
               id="new-quote"
             >
