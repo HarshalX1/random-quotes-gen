@@ -27,6 +27,7 @@ h1 {
   max-width: 60rem;
   border-radius: 2rem;
   padding: 3rem;
+  margin: 5rem;
 }
 
 #text {
@@ -59,4 +60,35 @@ a {
   padding: 1rem;
   outline: none;
   cursor: pointer;
+}
+
+/*Responsive at 1440px START*/
+@media (max-width: 1440px) {
+  * {
+    font-size: 8px;
+  }
+}
+/*Responsive at 1440px END*/
+
+/*Responsive at 1024px START*/
+@media (max-width: 1024px) {
+  * {
+    font-size: 6px;
+  }
+}
+/*Responsive at 1024px END*/
+
+/*Responsive at 768px START*/
+@media (max-width: 768px) {
+  * {
+    font-size: 5px;
+  }
+}
+/*Responsive at 768px END*/
+
+/*Responsive at 480px START*/
+@media (max-width: 480px) {
+  * {
+    font-size: 4px;
+  }
 }
